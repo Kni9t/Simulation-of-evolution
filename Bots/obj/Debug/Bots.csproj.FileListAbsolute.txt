@@ -1,0 +1,20 @@
+C:\Users\Slava\source\repos\Bots\Bots\bin\Debug\Bots.exe.config
+C:\Users\Slava\source\repos\Bots\Bots\bin\Debug\Bots.exe
+C:\Users\Slava\source\repos\Bots\Bots\bin\Debug\Bots.pdb
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.csprojAssemblyReference.cache
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.Form1.resources
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.Properties.Resources.resources
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.csproj.GenerateResource.cache
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.csproj.CoreCompileInputs.cache
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.exe
+C:\Users\Slava\source\repos\Bots\Bots\obj\Debug\Bots.pdb
+E:\4 - For programming\Bots\Bots\bin\Debug\Bots.exe.config
+E:\4 - For programming\Bots\Bots\bin\Debug\Bots.exe
+E:\4 - For programming\Bots\Bots\bin\Debug\Bots.pdb
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.csprojAssemblyReference.cache
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.Form1.resources
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.Properties.Resources.resources
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.csproj.GenerateResource.cache
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.csproj.CoreCompileInputs.cache
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.exe
+E:\4 - For programming\Bots\Bots\obj\Debug\Bots.pdb
