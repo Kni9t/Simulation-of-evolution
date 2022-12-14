@@ -12,12 +12,14 @@ namespace Bots
 {
     public partial class Form1 : Form
     {
-        public const int WIDTHCELL = 20, HIGHTCELL = 20; // 40
+        public const int WIDTHCELL = 20, HIGHTCELL = 20; // Ширина и высота клетки
         public const int ENERGYLOST = 1; // Кол-во потери энергии за тик
         public const int ENERGYLOSTMOVE = 5; // Кол-во потери энергии за перемещение
         public const int ENERGYFORMLIGHT = 5; // Коэффициент получения энергии
-        public const int MIGHTLIGHT = 6; // Мощность света, каждые 3 уровня, уменьшается
+        public const int MIGHTLIGHT = 7; // Мощность света, каждые 3 уровня, уменьшается
         public Brush BotColor = Brushes.Green; // Цвет ботов
+
+        // 20/20, 1, 5, 5, 7, Brushes.Green
 
         Bitmap BitMap;
         Graphics G;

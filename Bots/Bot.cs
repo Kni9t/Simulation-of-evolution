@@ -9,11 +9,13 @@ namespace Bots
 {
     public class Bot
     {
-        const int ENERGYFROMDEAD = 50; // Колличество энергии за поедание трупика бота
+        const int ENERGYFROMDEAD = 50; // Колличество энергии за поедание трупа бота
         const int ENERGYFROMHUNT = 75; // Колличество энергии за поедание бота
         const int GENOMSIZE = 64; // Размер генома
         const int MAXENERGY = 250; // Максимальное колличество энергии
         const int ENERGYFORSEGMENTATION = 65; // Колличество энергии необходимое на одно деление
+        const int MutationProbability = 25; // Вероятность мутации в %, максимум 100
+        // 50, 75, 64, 250, 65
 
 
         int IDLocation, IdBot, Energy = 30, Register = 0, DuringLive = 0;
@@ -100,90 +102,28 @@ namespace Bots
                 buf[i] = Genom[i];
             }
 
-            if (Form1.R.Next(0,101) <= 25) buf[Form1.R.Next(0, GENOMSIZE)] = Form1.R.Next(0, GENOMSIZE);
+            if (Form1.R.Next(0,101) <= MutationProbability) buf[Form1.R.Next(0, GENOMSIZE)] = Form1.R.Next(0, GENOMSIZE);
 
             return buf;
         }
 
         void Segmentation(int direction)
         {
-            switch (direction)
+            if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
             {
-                case 0:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap.AddBots(new Bot(Form1.CellMap[IDLocation].GetIDList()[0], Form1.CellMap.GetCountBots(), GetMutationGenom()));
-                        UpdateEnergy(-ENERGYFORSEGMENTATION);
-                    }
-                    break;
-
-                case 1:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap.AddBots(new Bot(Form1.CellMap[IDLocation].GetIDList()[1], Form1.CellMap.GetCountBots(), GetMutationGenom()));
-                        UpdateEnergy(-ENERGYFORSEGMENTATION);
-                    }
-                    break;
-
-                case 2:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap.AddBots(new Bot(Form1.CellMap[IDLocation].GetIDList()[2], Form1.CellMap.GetCountBots(), GetMutationGenom()));
-                        UpdateEnergy(-ENERGYFORSEGMENTATION);
-                    }
-                    break;
-
-                case 3:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap.AddBots(new Bot(Form1.CellMap[IDLocation].GetIDList()[3], Form1.CellMap.GetCountBots(), GetMutationGenom()));
-                        UpdateEnergy(-ENERGYFORSEGMENTATION);
-                    }
-                    break;
+                Form1.CellMap.AddBots(new Bot(Form1.CellMap[IDLocation].GetIDList()[direction], Form1.CellMap.GetCountBots(), GetMutationGenom()));
+                UpdateEnergy(-ENERGYFORSEGMENTATION);
             }
         }
 
         public void Move(int direction)
         {
             // Direction - направление 0 - вверх, 1 - право, 2 - низ, 3- лево
-
-            switch (direction)
+            if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
             {
-                case 0:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap[Form1.CellMap[IDLocation].GetIDList()[0]].TakeBot(Form1.CellMap[IDLocation].GiveBot());
-                        IDLocation = Form1.CellMap[IDLocation].GetIDList()[0];
-                        Energy -= Form1.ENERGYLOSTMOVE;
-                    }
-                    break;
-
-                case 1:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap[Form1.CellMap[IDLocation].GetIDList()[1]].TakeBot(Form1.CellMap[IDLocation].GiveBot());
-                        IDLocation = Form1.CellMap[IDLocation].GetIDList()[1];
-                        Energy -= Form1.ENERGYLOSTMOVE;
-                    }
-                    break;
-
-                case 2:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap[Form1.CellMap[IDLocation].GetIDList()[2]].TakeBot(Form1.CellMap[IDLocation].GiveBot());
-                        IDLocation = Form1.CellMap[IDLocation].GetIDList()[2];
-                        Energy -= Form1.ENERGYLOSTMOVE;
-                    }
-                    break;
-
-                case 3:
-                    if (Form1.CellMap[IDLocation].CheckFreeSpace(direction))
-                    {
-                        Form1.CellMap[Form1.CellMap[IDLocation].GetIDList()[3]].TakeBot(Form1.CellMap[IDLocation].GiveBot());
-                        IDLocation = Form1.CellMap[IDLocation].GetIDList()[3];
-                        Energy -= Form1.ENERGYLOSTMOVE;
-                    }
-                    break;
+                Form1.CellMap[Form1.CellMap[IDLocation].GetIDList()[direction]].TakeBot(Form1.CellMap[IDLocation].GiveBot());
+                IDLocation = Form1.CellMap[IDLocation].GetIDList()[direction];
+                Energy -= Form1.ENERGYLOSTMOVE;
             }
         }
 

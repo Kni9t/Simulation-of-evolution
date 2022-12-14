@@ -18,3 +18,14 @@ E:\4 - For programming\Bots\Bots\obj\Debug\Bots.csproj.GenerateResource.cache
 E:\4 - For programming\Bots\Bots\obj\Debug\Bots.csproj.CoreCompileInputs.cache
 E:\4 - For programming\Bots\Bots\obj\Debug\Bots.exe
 E:\4 - For programming\Bots\Bots\obj\Debug\Bots.pdb
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\bin\Debug\Bots.exe.config
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\bin\Debug\Bots.exe
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\bin\Debug\Bots.pdb
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.csproj.AssemblyReference.cache
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.csproj.SuggestedBindingRedirects.cache
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.Form1.resources
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.Properties.Resources.resources
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.csproj.GenerateResource.cache
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.csproj.CoreCompileInputs.cache
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.exe
+E:\3-For programming\GitHub\Simulation-of-evolution\Bots\obj\Debug\Bots.pdb
